@@ -3,7 +3,7 @@ from matplotlib.animation import FuncAnimation
 import csv
 
 # accessing csv file in reading mode
-f = open(r"C:\Users\sinha\OneDrive\Desktop\VS Code Projects\Real Time Random Graph\Data.csv", mode="r")
+f = open(r"Data.csv", mode="r")
 read = list(csv.reader(f))
 
 # initializing axes variables
@@ -20,7 +20,7 @@ figure, axis = pt.subplots(2,2)
 
 # animate function
 def animate(i):
-    f_new = open(r"C:\Users\sinha\OneDrive\Desktop\VS Code Projects\Real Time Random Graph\Data.csv", mode="r")
+    f_new = open(r"Data.csv", mode="r")
     new_read = list(csv.reader(f_new))
     if float(new_read[-1][1]) not in t_lis:
         t_lis.append(float(new_read[-1][1]))

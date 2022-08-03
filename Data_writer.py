@@ -5,7 +5,7 @@ import keyboard
 
 # accessing CSV file in read mode
 # for accessing last known serial number and t values
-fr = open(r'C:\Users\sinha\OneDrive\Desktop\VS Code Projects\Real Time Random Graph\Data.csv', mode='r')
+fr = open(r'Data.csv', mode='r')
 re = list(csv.reader(fr))
 if re != []:
     serialno = int(re[-1][0]) + 1
@@ -17,7 +17,7 @@ else:
 # function for inputting data by the second
 def Inp():
     # accessing CSV file in append mode
-    fw = open(r'C:\Users\sinha\OneDrive\Desktop\VS Code Projects\Real Time Random Graph\Data.csv', mode='a+', newline='')
+    fw = open(r'Data.csv', mode='a+', newline='')
     wr = csv.writer(fw)
     
     global serialno
